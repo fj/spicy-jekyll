@@ -1,5 +1,6 @@
 module Jekyll
   class SpicyCollections < Generator
+    VERSION = '0.0.1'
     safe true
     priority :high
 
