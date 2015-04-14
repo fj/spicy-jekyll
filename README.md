@@ -53,7 +53,7 @@ If not, you can just ignore that, and use the first example.
 
 Running SpicyJekyll on a custom collection has the following effects. Your collection will:
 
-* **Be ordered** by a `date` field. If you would rather sort by a different field, set the `sort_by` key on your collection. For example, to sort by a field called `last_name`, add `sort_by: last_name` to your collection's metadata in `_config.yml`.
+* **Be ordered** by a `date` field. If you would rather sort by a different field, set the `sort_by` key on your collection. For example, to sort by a field called `last_name`, add `sort_by: last_name` to your collection's metadata in `_config.yml`. The sorting is in ascending order. If you want to sort by descending, use the `reverse` filter.
 
 * **Have its documents augmented with `next` and `previous` references.** The aforementioned ordering will be used to sort your collection. The first document will have a `nil` reference to `previous` and the last document will have a `nil` reference to `next. Each navigation reference is a hash containing `title` and `url` fields. This is helpful for showing next/previous navigation links in your templates, for instance.
 
