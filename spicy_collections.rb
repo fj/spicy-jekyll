@@ -21,7 +21,9 @@ module Jekyll
 
         constructed_slug = doc_title
         Jekyll.logger.info "writing slug for #{refname}: #{constructed_slug}"
-        d.data['permalink'] = "/#{collection_name}/#{constructed_slug}/"
+        if d.data['permalink']
+          d.data['permalink'] = "/#{collection_name}/#{constructed_slug}/"
+        end
 
         if !doc_id.empty?
           Jekyll.logger.info "writing document id for #{d.basename_without_ext}: #{collection_name}-#{doc_id}"
