@@ -21,7 +21,7 @@ module Jekyll
 
         constructed_slug = doc_title
         Jekyll.logger.info "writing slug for #{refname}: #{constructed_slug}"
-        if d.data['permalink']
+        if not collection.metadata['permalink']
           d.data['permalink'] = "/#{collection_name}/#{constructed_slug}/"
         end
 
